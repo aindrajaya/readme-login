@@ -1,14 +1,30 @@
 extends layout
 
 block content
-  h1 Demo Login Test
-  form(method='POST')
-    .form-group
-      label Email
-      input.form-control(name='email' required value='your@email.com')
-
-    .form-group
-      label Password
-      input.form-control(name='password' type='password' required value='123456')
-
-    button.btn.btn-primary(type='submit') Login
+  section(style='background-color: #211b4f; display: flex; justify-content: center; align-items: center; width: 100vw; height: 100vh;')
+      .container.py-5
+        .row.d-flex.justify-content-center.align-items-center
+          .col.col-xl-6
+            .card(style='border-radius: 1rem;')
+              .row.g-0
+                .col-md-6.col-lg-12.d-flex.align-items-center
+                  .card-body.p-4.p-lg-5.text-black
+                    form(method='POST')
+                      .d-flex.align-items-center.mb-3.pb-1
+                        i.fas.fa-cubes.fa-2x.me-3(style='color: #ff6219;')
+                        span.h1.fw-bold.mb-0 Blockdaemon
+                      h5.fw-normal.mb-3.pb-3(style='letter-spacing: 1px;') Sign into your account
+                      .form-outline.mb-4
+                        input#form2Example17.form-control.form-control-lg(type='email' name='email' required value="yourname@mail.com")
+                        label.form-label(for='form2Example17') Email address
+                      .form-outline.mb-4
+                        input#form2Example27.form-control.form-control-lg(type='password' name='password' required value="******")
+                        label.form-label(for='form2Example27') Password
+                      .pt-1.mb-4
+                        button.btn.btn-lg.btn-block(type='submit' style="background-color: #211b4f; color:#e3e2e8;") Login
+                      a.small.text-muted(href='#!') Forgot password?
+                      p.mb-5.pb-lg-2(style='color: #393f81;')
+                        | Don&apos;t have an account? 
+                        a(href='#!', style='color: #393f81;') Register here
+                      //- a.small.text-muted(href='#!') Terms of use.
+                      //- a.small.text-muted(href='https://wallet.docs.blockdaemon.com/') Privacy policy
